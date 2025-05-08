@@ -39,7 +39,7 @@ if __name__ == "__main__":
     # Write each transaction with its index to the file
     for index, transaction in enumerate(transactions, start=1):
         # Convert the list to a comma-separated string and write the index and transaction
-        file.write(f"{index} {' '.join(transaction)}\n")
+        file.write(f"{index}: {', '.join(transaction)}\n")
 
     # Close the file
     file.close()
