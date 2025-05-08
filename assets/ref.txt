@@ -1,0 +1,1 @@
+member id with same date : considered as one transaction with different item purchased
