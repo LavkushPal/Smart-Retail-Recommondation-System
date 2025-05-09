@@ -1,0 +1,27 @@
+liquor (appetizer): liver loaf, dessert
+liver loaf: liquor (appetizer)
+dessert: liquor (appetizer)
+kitchen towels: sliced cheese
+sliced cheese: kitchen towels
+fish: tropical fruit
+tropical fruit: fish
+snack products: rolls/buns
+rolls/buns: snack products
+whisky: specialty chocolate, dishes, yogurt, napkins, detergent, pastry
+specialty chocolate: whisky
+dishes: whisky
+yogurt: whisky, cream
+napkins: whisky
+detergent: whisky
+pastry: whisky, hair spray
+cream: yogurt
+hair spray: butter, pastry
+butter: hair spray
+nut snack: canned beer
+canned beer: nut snack
+frozen dessert: cream cheese
+cream cheese: frozen dessert, tidbits
+organic sausage: frozen meals, sugar
+frozen meals: organic sausage
+sugar: organic sausage
+tidbits: cream cheese
