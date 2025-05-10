@@ -1,0 +1,44 @@
+
+/* font-face used to define respective fonts */
+@font-face { 
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins/Poppins-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito-Sans';
+    src: url('./assets/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --background-color: #0F172A;
+    --text-color: #F1F5F9;
+    --accent-color: #3EA7E8;
+    --font-family:'Inter,Poppins,Nunito-Sans ';
+    --font-size:16px;
+    --max-width:'100%';
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family:var(--font-family);
+    font-size: var(--font-size);
+    max-width: var(--max-width);
+}
+
+a{
+    color:var(--accent-color) ;
+    text-decoration: none;
+}

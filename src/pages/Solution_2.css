@@ -1,0 +1,84 @@
+/* General container styling */
+.solution-2-container {
+  padding: 20px;
+  font-family: var(--font-family);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Heading styles */
+.solution-2-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.solution-2-container p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Input section styling */
+.input-section {
+  margin-bottom: 20px;
+}
+
+.input-section label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.input-section input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-section button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Suggestions section styling */
+.suggestions-section {
+  margin-top: 20px;
+}
+
+.suggestions-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.suggestions-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.suggestions-section li {
+  font-size: 1rem;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.suggestions-section li:last-child {
+  border-bottom: none;
+}
+
+.suggestions-section p {
+  font-size: 1rem;
+  color: #888;
+}

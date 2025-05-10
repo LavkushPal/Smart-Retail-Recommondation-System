@@ -1,0 +1,43 @@
+/* General container styling */
+.solution-container {
+  padding: 20px;
+  width: 80%; /* Restrict the container width to 80% of the body */
+  max-width: 1200px; /* Optional: Add a maximum width for larger screens */
+  margin: 0 auto; /* Center the container horizontally */
+  font-family: var(--font-family);
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+}
+
+/* Section heading styles */
+.solution-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.solution-container h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Placeholder box styling */
+.layout-box {
+  width: 90%; /* Ensure the box takes up 90% of the container's width */
+  max-width: 1000px; /* Optional: Add a maximum width for larger screens */
+  height: 300px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Placeholder text styling */
+.layout-box p {
+  color: #888;
+  font-size: 1rem;
+}
