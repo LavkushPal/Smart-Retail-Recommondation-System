@@ -1,6 +1,10 @@
 import React from 'react';
 import './Solution_1.css'; // Import the CSS file
 
+import random from '../assets/Random Layout.png';
+import optimized from '../assets/optimized layout.png';
+
+
 function Solution_1() {
   return (
     <div className="solution-container">
@@ -16,13 +20,13 @@ function Solution_1() {
       {/* Random Layout Section */}
       <h2>Random Layout</h2>
       <div className="layout-box">
-        <p>Designed image of random layout goes here</p>
+        <img src={random} />
       </div>
 
       {/* Optimized Layout Section */}
       <h2>Optimized Layout</h2>
       <div className="layout-box">
-        <p>Designed image of optimized layout goes here</p>
+        <img src={optimized} />
       </div>
     </div>
   );
