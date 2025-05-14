@@ -42,7 +42,7 @@
 .input-section button {
   padding: 10px 20px;
   font-size: 1rem;
-  color: #fff;
+  color: var( --text-color);
   background-color: #007bff;
   border: none;
   border-radius: 5px;
@@ -53,32 +53,33 @@
   background-color: #0056b3;
 }
 
-/* Suggestions section styling */
-.suggestions-section {
+/* Purchased and Suggestions section styling */
+.purchased-suggestions-section {
   margin-top: 20px;
 }
 
-.suggestions-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.purchased-item-group {
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-.suggestions-section ul {
+.purchased-item-group h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.purchased-item-group ul {
   list-style-type: none;
   padding: 0;
 }
 
-.suggestions-section li {
+.purchased-item-group li {
   font-size: 1rem;
   padding: 5px 0;
   border-bottom: 1px solid #ccc;
 }
 
-.suggestions-section li:last-child {
+.purchased-item-group li:last-child {
   border-bottom: none;
-}
-
-.suggestions-section p {
-  font-size: 1rem;
-  color: #888;
 }

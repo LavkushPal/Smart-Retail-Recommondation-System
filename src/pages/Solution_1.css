@@ -4,7 +4,7 @@
   width: 80%; /* Restrict the container width to 80% of the body */
   max-width: 1200px; /* Optional: Add a maximum width for larger screens */
   margin: 0 auto; /* Center the container horizontally */
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
   display: flex; /* Use flexbox */
   flex-direction: column; /* Stack children vertically */
   align-items: center; /* Center children horizontally */

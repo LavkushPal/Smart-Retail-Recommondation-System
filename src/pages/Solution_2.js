@@ -3,14 +3,37 @@ import './Solution_2.css'; // Import the CSS file
 
 function Solution_2() {
   const [purchasedItems, setPurchasedItems] = useState([]);
-  const [suggestedProducts, setSuggestedProducts] = useState([]);
+  const [suggestionsByProduct, setSuggestionsByProduct] = useState({});
 
-  // Mock association rules (replace with real data)
+  // Hardcoded association rules
   const associationRules = {
-    milk: ['bread', 'butter'],
-    bread: ['milk', 'jam'],
-    soda: ['chips', 'cookies'],
-    eggs: ['cheese', 'bacon'],
+    'liquor (appetizer)': ['liver loaf', 'dessert'],
+    'liver loaf': ['liquor (appetizer)'],
+    dessert: ['liquor (appetizer)'],
+    'kitchen towels': ['sliced cheese'],
+    'sliced cheese': ['kitchen towels'],
+    fish: ['tropical fruit'],
+    'tropical fruit': ['fish'],
+    'snack products': ['rolls/buns'],
+    'rolls/buns': ['snack products'],
+    whisky: ['specialty chocolate', 'dishes', 'yogurt', 'napkins', 'detergent', 'pastry'],
+    'specialty chocolate': ['whisky'],
+    dishes: ['whisky'],
+    yogurt: ['whisky', 'cream'],
+    napkins: ['whisky'],
+    detergent: ['whisky'],
+    pastry: ['whisky', 'hair spray'],
+    cream: ['yogurt'],
+    'hair spray': ['butter', 'pastry'],
+    butter: ['hair spray'],
+    'nut snack': ['canned beer'],
+    'canned beer': ['nut snack'],
+    'frozen dessert': ['cream cheese'],
+    'cream cheese': ['frozen dessert', 'tidbits'],
+    'organic sausage': ['frozen meals', 'sugar'],
+    'frozen meals': ['organic sausage'],
+    sugar: ['organic sausage'],
+    tidbits: ['cream cheese'],
   };
 
   // Handle input change
@@ -19,15 +42,15 @@ function Solution_2() {
     setPurchasedItems(items);
   };
 
-  // Generate suggestions based on association rules
+  // Generate suggestions grouped by purchased product
   const generateSuggestions = () => {
-    const suggestions = new Set();
+    const suggestions = {};
     purchasedItems.forEach((item) => {
       if (associationRules[item]) {
-        associationRules[item].forEach((suggestedItem) => suggestions.add(suggestedItem));
+        suggestions[item] = associationRules[item];
       }
     });
-    setSuggestedProducts([...suggestions]);
+    setSuggestionsByProduct(suggestions);
   };
 
   return (
@@ -43,21 +66,25 @@ function Solution_2() {
         <input
           type="text"
           id="purchased-items"
-          placeholder="e.g., milk, bread, soda"
+          placeholder="e.g., liquor (appetizer), fish"
           onChange={handleInputChange}
         />
         <button onClick={generateSuggestions}>Generate Suggestions</button>
       </div>
 
-      {/* Suggestions Section */}
-      <div className="suggestions-section">
-        <h2>Suggested Products</h2>
-        {suggestedProducts.length > 0 ? (
-          <ul>
-            {suggestedProducts.map((product, index) => (
-              <li key={index}>{product}</li>
-            ))}
-          </ul>
+      {/* Purchased Items and Suggestions Section */}
+      <div className="purchased-suggestions-section">
+        {Object.keys(suggestionsByProduct).length > 0 ? (
+          Object.entries(suggestionsByProduct).map(([purchasedItem, suggestions], index) => (
+            <div key={index} className="purchased-item-group">
+              <h2>{purchasedItem}</h2>
+              <ul>
+                {suggestions.map((suggestedItem, idx) => (
+                  <li key={idx}>{suggestedItem}</li>
+                ))}
+              </ul>
+            </div>
+          ))
         ) : (
           <p>No suggestions available. Please enter purchased items.</p>
         )}

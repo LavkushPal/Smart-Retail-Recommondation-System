@@ -1,0 +1,47 @@
+/* General container styling */
+.home-container {
+  padding: 20px;
+  font-family: var(--font-family);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Heading styles */
+.home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.home-container h2 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: var( --accent-color);
+}
+
+.home-container h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: var( --text-color);}
+
+/* Paragraph styles */
+.home-container p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: var( --text-color);
+}
+
+/* List styles */
+.home-container ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.home-container li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: var( --text-color);
+}

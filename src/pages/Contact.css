@@ -1,0 +1,33 @@
+/* General container styling */
+.contact-container {
+  padding: 20px;
+  font-family: var(--font-family);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Heading styles */
+.contact-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* Paragraph styles */
+.contact-container p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+/* Email link styling */
+.contact-container a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.contact-container a:hover {
+  text-decoration: underline;
+}
